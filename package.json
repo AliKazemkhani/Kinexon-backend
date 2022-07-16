@@ -1,0 +1,39 @@
+{
+  "name": "driver-data",
+  "version": "1.1.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-static": "^0.7.7",
+    "randopeep": "^0.2.5"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "fix:eslint": "eslint --fix src/**/*.js  src/*.js",
+    "fix:prettier": "prettier --write src/**/*.js src/*.js '!__tests__/*.js'",
+    "lint": "lint:eslint && lint:prettier",
+    "lint:eslint": "eslint *.js",
+    "lint:prettier": "prettier --check *.js '!__tests__/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "author": "Kinexon",
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^8.0.1",
+    "jshint": "^2.13.5",
+    "prettier": "^2.7.1"
+  }
+}
